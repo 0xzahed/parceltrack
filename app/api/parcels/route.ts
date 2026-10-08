@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { trackParcel } from "@/lib/couriers";
 import { addParcel, deleteParcel, listParcels, storageMode } from "@/lib/store";
 
+export const dynamic = "force-dynamic"; // fresh statuses on every request
+
 export async function GET() {
   const parcels = await listParcels();
   const stats = {

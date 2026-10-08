@@ -1,9 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  /* Live parcel statuses — never serve cached API responses. */
+  cacheComponents: false,
   turbopack: {
     rules: {
       "*.css": {
